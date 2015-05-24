@@ -4,38 +4,75 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
+/**
+ * 自定义actionbar的父类
+ */
 public class BaseCustomActivity extends Activity {
+    protected boolean isShowShare = false;
+    protected String title;
+    public TextView base_custom_titlebar_title;
+    public ImageButton base_custom_titlebar_back;
+    public ImageButton base_custom_titlebar_share;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_custom);
-        getActionBar().hide();
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_base_custom, menu);
-        return true;
+        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    protected void onResume() {
+        super.onResume();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        base_custom_titlebar_back = (ImageButton) findViewById(R.id.base_custom_titlebar_back);
+        base_custom_titlebar_share = (ImageButton) findViewById(R.id.base_custom_titlebar_share);
+        base_custom_titlebar_title = (TextView) findViewById(R.id.base_custom_titlebar_title);
+
+        if (base_custom_titlebar_back != null) {
+            base_custom_titlebar_back.setVisibility(View.VISIBLE);
+            base_custom_titlebar_back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    onBackPressed();
+                }
+            });
         }
 
-        return super.onOptionsItemSelected(item);
+        if (base_custom_titlebar_share != null) {
+            if (isShowShare) {
+                base_custom_titlebar_share.setVisibility(View.VISIBLE);
+                base_custom_titlebar_share.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        onShare();
+                    }
+                });
+            } else {
+                base_custom_titlebar_share.setVisibility(View.GONE);
+            }
+        }
+        if (title != null && !title.equals("")) {
+            setTitle(title);
+        }
+    }
+
+    /**
+     * 为子类的分享提供重写方法
+     */
+    protected void onShare() {
+
+    }
+
+    @Override
+    public void setTitle(CharSequence title) {
+        if (base_custom_titlebar_title != null)
+            base_custom_titlebar_title.setText(title);
     }
 }

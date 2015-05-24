@@ -15,5 +15,6 @@
     <string name="title_activity_test_hide">测试隐藏actionbar</string>
     <string name="title_activity_base_custom">自定义BaseActivity</string>
     <string name="title_activity_test_custom">测试基类activity</string>
+    <string name="title_activity_abase">最底层的基类</string>
 
 </resources>

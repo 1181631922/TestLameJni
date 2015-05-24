@@ -95,9 +95,9 @@ initView();
         return super.onOptionsItemSelected(item);
     }
 
-//    @Override
-//    protected void BaseBack() {
-//    }
+    @Override
+    protected void BaseBack() {
+    }
 
     @Override
     protected void isShowBack() {

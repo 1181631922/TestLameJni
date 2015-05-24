@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
@@ -13,6 +14,8 @@ public class TestCustomActivity extends BaseCustomActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_custom);
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.base_custom_title_bar);
+        title="樊亚风测试";
     }
 
 

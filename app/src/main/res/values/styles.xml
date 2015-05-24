@@ -1,5 +1,13 @@
 <resources>
 
+    <style name="noTitle" parent="@android:style/Theme.Light.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -73,4 +81,21 @@
         <!--定义左上角按钮-->
         <item name="android:src">@drawable/actionbar_more_icon</item>
     </style>
+    <!--自定义titlebar-->
+    <style name="XTheme" parent="android:Theme.Light">
+
+        <!-- Window attributes -->
+        <item name="android:windowTitleBackgroundStyle">@style/StatusBarBackground</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleSize">41dp</item>
+        <item name="android:actionModeBackground">@color/white</item>
+        <item name="android:backgroundDimAmount">@color/white</item>
+        <item name="android:backgroundDimEnabled">@color/white</item>
+        <item name="android:backgroundStacked">@color/white</item>
+    </style>
+
+    <style name="StatusBarBackground">
+        <item name="android:background">@null</item>
+    </style>
+
 </resources>
