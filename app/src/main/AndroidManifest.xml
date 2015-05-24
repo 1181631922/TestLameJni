@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.sjzc.fanyafeng.testlamejni" >
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/CustomTheme" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="主页" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.BaseActivity"
+            android:allowBackup="true"
+            android:label="@string/title_activity_base" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label="@string/title_activity_setting" />
+        <activity
+            android:name=".activity.PhotoActivity"
+            android:allowBackup="true"
+            android:label="@string/title_activity_photo"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".activity.ScanActivity"
+            android:label="@string/title_activity_scan"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".activity.ChangeThemeActivity"
+            android:label="@string/title_activity_change_theme" />
+        <activity
+            android:name=".activity.TestBaseActivity"
+            android:label="@string/title_activity_test" />
+        <activity
+            android:name=".activity.TestWeChatActivity"
+            android:label="@string/title_activity_test1" >
+        </activity>
+        <activity
+            android:name=".activity.TestTitleActivity"
+            android:label="@string/title_activity_test2" >
+        </activity>
+    </application>
+
+</manifest>
