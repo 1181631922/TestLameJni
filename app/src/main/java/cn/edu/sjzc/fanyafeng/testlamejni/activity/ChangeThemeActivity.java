@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
-public class ChangeThemeActivity extends Activity {
+public class ChangeThemeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

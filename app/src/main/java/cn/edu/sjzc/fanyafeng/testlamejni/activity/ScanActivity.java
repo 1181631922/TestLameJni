@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
-public class ScanActivity extends Activity {
+public class ScanActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
-public class SettingActivity extends Activity {
+public class SettingActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -21,7 +21,7 @@ import cn.edu.sjzc.fanyafeng.testlamejni.R;
 public class BaseActivity extends Activity {
     protected String title;
     protected String subtitle;
-    protected String SubtitleContent;
+    protected boolean ishide = false;
 
     /**
      * getActionBar只能在onCreate进行get
@@ -76,9 +76,9 @@ public class BaseActivity extends Activity {
             case android.R.id.home:
                 BaseBack();
                 break;
-            case R.id.base_action_setting1:
-                finish();
-                break;
+//            case R.id.base_action_setting1:
+//                finish();
+//                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -134,16 +134,25 @@ public class BaseActivity extends Activity {
 
     /**
      * 一级标题
+     *
      * @param title
      */
     protected void setTitleContent(String title) {
         getActionBar().setTitle(title);
     }
 
+    /**
+     * 二级标题
+     *
+     * @param subtitle
+     */
     protected void setSubtitleContent(String subtitle) {
         getActionBar().setSubtitle(subtitle);
     }
 
+    protected void isActionBaiHide(boolean ishide) {
+        getActionBar().hide();
+    }
 
     @Override
     protected void onResume() {
@@ -153,6 +162,9 @@ public class BaseActivity extends Activity {
         }
         if (subtitle != null && !subtitle.equals("")) {
             setSubtitleContent(subtitle);
+        }
+        if (ishide) {
+            isActionBaiHide(true);
         }
     }
 }

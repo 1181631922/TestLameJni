@@ -19,7 +19,7 @@ public class TestTitleActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test2);
-        title="樊亚风-----------------";
+        title="樊亚风";
         subtitle="二级标题";
     }
 

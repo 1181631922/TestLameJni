@@ -14,13 +14,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        getActionBar().setDisplayShowTitleEnabled(false);
-        //设置背景图片
-//        ActionBar actionBar = getActionBar();
-//        Resources r = getResources();
-//        Drawable myDrawable = r.getDrawable(R.color.lightslategrey);
-//        actionBar.setBackgroundDrawable(myDrawable);
-//        actionBar.setDisplayHomeAsUpEnabled(false);
         //主标题
         getActionBar().setTitle("姓名：樊亚风");
         //子标题
@@ -75,6 +68,10 @@ public class MainActivity extends BaseActivity {
             case R.id.main_action_test3:
                 Intent intent6 = new Intent(MainActivity.this, TestTitleActivity.class);
                 startActivity(intent6);
+                break;
+            case R.id.main_action_test4:
+                Intent intent7 = new Intent(MainActivity.this, TestHideActivity.class);
+                startActivity(intent7);
                 break;
         }
 
