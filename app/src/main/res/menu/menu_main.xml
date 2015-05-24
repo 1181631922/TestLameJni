@@ -27,6 +27,11 @@
                 android:showAsAction="always|withText"
                 android:icon="@drawable/y"
                 android:title="测试隐藏actionbar" />
+            <item
+                android:id="@+id/main_action_test5"
+                android:showAsAction="always|withText"
+                android:icon="@drawable/a"
+                android:title="测试自定义actionbar" />
         </menu>
     </item>
     <item

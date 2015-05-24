@@ -4,22 +4,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
 
 public class MainActivity extends BaseActivity {
-
+private TextView user_sex,user_age,user_csdn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //主标题
-        getActionBar().setTitle("姓名：樊亚风");
-        //子标题
-        getActionBar().setSubtitle("目的：测试xxx控件");
+        title="樊亚风";
+        subtitle=qq;
 
+initView();
+        initData();
+    }
 
+    private void initView(){
+        user_sex=(TextView)findViewById(R.id.user_sex);
+        user_age=(TextView)findViewById(R.id.user_age);
+        user_csdn=(TextView)findViewById(R.id.user_csdn);
+    }
+
+    private void initData(){
+        user_sex.setText(sex);
+        user_age.setText(age);
+        user_csdn.setText(csdn);
     }
 
 
@@ -72,6 +84,10 @@ public class MainActivity extends BaseActivity {
             case R.id.main_action_test4:
                 Intent intent7 = new Intent(MainActivity.this, TestHideActivity.class);
                 startActivity(intent7);
+                break;
+            case R.id.main_action_test5:
+                Intent intent8 = new Intent(MainActivity.this, TestCustomActivity.class);
+                startActivity(intent8);
                 break;
         }
 

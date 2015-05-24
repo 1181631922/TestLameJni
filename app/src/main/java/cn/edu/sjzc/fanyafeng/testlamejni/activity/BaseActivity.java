@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
 /**
@@ -19,9 +23,16 @@ import cn.edu.sjzc.fanyafeng.testlamejni.R;
  * 本来想找一下在代码中定制theme的方法，但是没找到，后期找到后会加上
  */
 public class BaseActivity extends Activity {
+    //相同的类型可以用一个string的，为了以后的移植都进行了单个的定义
     protected String title;
     protected String subtitle;
     protected boolean ishide = false;
+    protected String name;
+    protected String sex;
+    protected String qq;
+    protected String csdn;
+    protected String age;
+
 
     /**
      * getActionBar只能在onCreate进行get
@@ -37,16 +48,28 @@ public class BaseActivity extends Activity {
         ActionBar actionBar=getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);*/
 
-
         isShowIcon();
         isShowBack();
         isShowBackIcon();
         isShowTitle();
         setTitleIcon();
         setTitleBackground();
-//        setTitleContent();
-//        setSubtitleContent();
+        getPropertyFileContent();
+    }
 
+    private void getPropertyFileContent() {
+        Properties properties = new Properties();
+        try {
+            InputStream inputStream = getAssets().open("fanyafeng.properties");
+            properties.load(inputStream);
+            name = properties.getProperty("name");
+            sex = properties.getProperty("sex");
+            qq = properties.getProperty("qq");
+            csdn = properties.getProperty("csdn");
+            age=properties.getProperty("age");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -154,6 +177,9 @@ public class BaseActivity extends Activity {
         getActionBar().hide();
     }
 
+    /**
+     * 对重新赋值的字段进行判断
+     */
     @Override
     protected void onResume() {
         super.onResume();

@@ -17,6 +17,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+
+        z1181631922 {
+            applicationId "cn.edu.sjzc.fanyafeng.testlamejni.z1181631922"
+            manifestPlaceholders = [APP_NAME: "常用QQ"]
+        }/*
+
+        z948744852 {
+            applicationId "cn.edu.sjzc.fanyafeng.testlamejni.z948744852"
+            manifestPlaceholders = [APP_NAME: "不常用QQ"]
+        }*/
+    }
 }
 
 dependencies {

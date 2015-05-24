@@ -4,11 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
+        android:label="${APP_NAME}"
         android:theme="@style/CustomTheme" >
         <activity
             android:name=".activity.MainActivity"
-            android:label="主页" >
+            android:label="${APP_NAME}" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,6 +48,14 @@
         <activity
             android:name=".activity.TestHideActivity"
             android:label="@string/title_activity_test_hide" >
+        </activity>
+        <activity
+            android:name=".activity.BaseCustomActivity"
+            android:label="@string/title_activity_base_custom" >
+        </activity>
+        <activity
+            android:name=".activity.TestCustomActivity"
+            android:label="@string/title_activity_test_custom" >
         </activity>
     </application>
 
