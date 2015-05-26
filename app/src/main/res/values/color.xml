@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="custom_background"> #F3F3F3</color>
     <color name="base_custom_title_bar_background">#6593cb</color>
     <color name="background_tab_pressed">#6633B5E5</color>
     <color name="weichatbackground">#303537</color>

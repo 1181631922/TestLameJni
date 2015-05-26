@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.edu.sjzc.fanyafeng.testlamejni" >
+    package="cn.edu.sjzc.fanyafeng.testlamejni">
 
     <application
         android:allowBackup="true"
         android:label="${APP_NAME}"
-        android:theme="@style/CustomTheme"
-        >
+        android:theme="@style/CustomTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:label="${APP_NAME}" >
+            android:label="${APP_NAME}">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,22 +35,26 @@
             android:label="@string/title_activity_test" />
         <activity
             android:name=".activity.TestWeChatActivity"
-            android:label="@string/title_activity_test1" >
-        </activity>
+            android:label="@string/title_activity_test1" />
         <activity
             android:name=".activity.TestTitleActivity"
-            android:label="@string/title_activity_test2" >
-        </activity>
+            android:label="@string/title_activity_test2" />
         <activity
             android:name=".activity.TestHideActivity"
-            android:label="@string/title_activity_test_hide" >
-        </activity>
+            android:label="@string/title_activity_test_hide" />
         <activity
             android:name=".activity.TestCustomActivity"
             android:theme="@style/XTheme"
-            android:label="@string/title_activity_test_custom" >
-        </activity>
+            android:label="@string/title_activity_test_custom" />
+        <activity
+            android:name=".activity.TestPopWindowActivity"
+            android:label="@string/title_activity_test_pop_window" />
+        <activity
+            android:name=".activity.ChangeBackgroudActivity"
+            android:label="@string/title_activity_change_backgroud" />
     </application>
 
+
 </manifest>
+
 

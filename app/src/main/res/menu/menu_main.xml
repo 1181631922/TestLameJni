@@ -32,6 +32,16 @@
                 android:showAsAction="always|withText"
                 android:icon="@drawable/a"
                 android:title="测试自定义actionbar" />
+            <item
+                android:id="@+id/main_action_test6"
+                android:showAsAction="always|withText"
+                android:icon="@drawable/f"
+                android:title="测试popwindow" />
+            <item
+                android:id="@+id/main_action_test7"
+                android:showAsAction="always|withText"
+                android:icon="@drawable/e"
+                android:title="测试切换背景" />
         </menu>
     </item>
     <item

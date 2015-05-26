@@ -10,25 +10,26 @@ import cn.edu.sjzc.fanyafeng.testlamejni.R;
 
 
 public class MainActivity extends BaseActivity {
-private TextView user_sex,user_age,user_csdn;
+    private TextView user_sex, user_age, user_csdn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        title="樊亚风";
-        subtitle=qq;
+        title = "樊亚风";
+        subtitle = qq;
 
-initView();
+        initView();
         initData();
     }
 
-    private void initView(){
-        user_sex=(TextView)findViewById(R.id.user_sex);
-        user_age=(TextView)findViewById(R.id.user_age);
-        user_csdn=(TextView)findViewById(R.id.user_csdn);
+    private void initView() {
+        user_sex = (TextView) findViewById(R.id.user_sex);
+        user_age = (TextView) findViewById(R.id.user_age);
+        user_csdn = (TextView) findViewById(R.id.user_csdn);
     }
 
-    private void initData(){
+    private void initData() {
         user_sex.setText(sex);
         user_age.setText(age);
         user_csdn.setText(csdn);
@@ -89,6 +90,14 @@ initView();
                 Intent intent8 = new Intent(MainActivity.this, TestCustomActivity.class);
                 startActivity(intent8);
                 break;
+            case R.id.main_action_test6:
+                Intent intent9 = new Intent(MainActivity.this, TestPopWindowActivity.class);
+                startActivity(intent9);
+                break;
+            case R.id.main_action_test7:
+                Intent intent10 = new Intent(MainActivity.this, ChangeBackgroudActivity.class);
+                startActivity(intent10);
+                break;
         }
 
 
@@ -110,5 +119,10 @@ initView();
 
     @Override
     protected void setTitleBackground() {
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }
