@@ -27,6 +27,7 @@ public class GenericsTest {
         initTwoParams();
         initObject();
         initArray();
+        isBlank("性别", "男", "csdn","http://blog.csdn.net/qq_23195583");
     }
 
     private static void initInteger() {
@@ -86,5 +87,33 @@ public class GenericsTest {
         list.add("年龄");
         list.add(24);
         oneListParams.show(list);
+        S.l();
+    }
+
+    public static void isBlank(String... str) {
+        if (str == null || str.length == 0) {
+            return;
+        } else {
+            for (String s : str) {
+                S.pl(s);
+            }
+        }
+        S.l();
+        return;
     }
 }
+
+//    public static boolean isBlank(String... str) {
+//        if (str == null || str.length == 0) {
+//            return true;
+//        } else {
+//            for (String s : str) {
+//                if (GenericsTest.isBlank(s)) {
+//                    S.pl(s);
+//                    return true;
+//                }
+//            }
+//            return false;
+//        }
+//    }
+//}
