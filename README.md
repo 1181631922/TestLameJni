@@ -7,4 +7,4 @@
 * 5.单个activity的背景的更改<br>
 
 ### 运行效果图
-![效果图](https://github.com/1181631922/TestLameJni/img/actionbar.gif)
+![效果图](https://github.com/1181631922/TestLameJni/blob/master/img/actionbar.gif)
